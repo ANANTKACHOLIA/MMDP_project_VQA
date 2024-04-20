@@ -30,7 +30,7 @@ The repository consists of the following files:
    - `train-images.txt` and `test-images.txt`: Text files containing the image lists for training and validation.
    - `qa-full.txt`: Text file containing all the questions in the dataset.
 ### Note
-The dataset used for this implementation can be obtained from [Kaggle](https://www.kaggle.com/) or an alternative source. Due to the large size of the images (over 400MB), they are not included in this repository.
+The dataset used for this implementation can be obtained from [Kaggle](https://www.kaggle.com/datasets/anantkacholia/mmdp-vqa) or an alternative source. Due to the large size of the images (over 400MB), they are not included in this repository.
 
 ### Usage Instructions
 To use the implementation:
