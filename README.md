@@ -174,3 +174,9 @@ If you use this implementation or dataset in your research, please consider citi
 
 Aishwarya Agrawal, Jiasen Lu, Stanislaw Antol, Margaret Mitchell, C. Lawrence Zitnick, Dhruv Batra, Devi Parikh. "VQA: Visual Question Answering." [www.visualqa.org](www.visualqa.org).
 
+
+### Acknowledgments
+
+We extend our gratitude to the numerous sources and contributors whose work has been invaluable in the development of this project. While it's not feasible to name each one individually, we acknowledge the collective efforts of researchers, educators, developers, and open-source communities whose work has laid the foundation for our endeavors. We are indebted to the wealth of knowledge shared through research papers, online forums, tutorials, and code repositories, which have guided and inspired our work.
+
+Lastly, we thank our colleagues, mentors, and peers for their support, feedback, and collaboration throughout this journey. Their insights and encouragement have been instrumental in shaping our ideas and refining our approaches.
