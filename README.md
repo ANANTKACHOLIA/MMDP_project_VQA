@@ -82,13 +82,75 @@ The `VQAModel.py` file contains the implementation of the Visual Question Answer
 
 - **Imports**: The file imports necessary libraries and modules including `torch`, `nltk`, `numpy`, `PIL`, `pandas`, `os`, `re`, `json`, `torchvision`, and `torch.nn`. It also imports specific functions and classes from these libraries such as `word_tokenize` from `nltk.tokenize`, `load_dataset` and `set_caching_enabled` from `datasets`, and various modules from `torchvision.models`.
 
-- **VQAModel Class**: 
+- **Model Class**: 
   - `__init__`: The constructor initializes the VQA model. It sets up the image embedding using VGG16 pretrained on ImageNet and removes the last fully connected layer. It defines the architecture of the model including text embedding, LSTM layers, and fully connected layers.
   - `forward`: This method defines the forward pass of the model. It takes images and prompts as inputs and returns the predicted features.
 
 This file encapsulates the architecture of the VQA model, allowing for its easy integration and usage within the broader VQA system.
 
 ![image](https://github.com/ANANTKACHOLIA/MMDP_project_VQA/assets/95161741/94396b58-31f6-4113-bd4e-21be4d39bd2a)
+
+### Description of `Dataset.py`
+
+The `QADataset.py` file contains the implementation of the dataset class used for loading and preprocessing data for the Visual Question Answering (VQA) system. Below is a detailed description of the contents of this file:
+
+- **Imports**: The file imports necessary libraries and modules including `torch`, `os`, `PIL`, and `pandas`.
+
+- **QADataset Class**: 
+  - `__init__`: The constructor initializes the dataset class. It takes the dataset, transformation functions, and other preprocessing functions as input arguments. It loads the dataset, including image paths, questions, and answers, and preprocesses them if necessary.
+  - `load`: This method loads the dataset by extracting image paths, questions, and answers from the provided dataset. It also preprocesses the questions and answers if specified.
+  - `__len__`: This method returns the length of the dataset.
+  - `max_length`: This method returns the maximum length of the dataset.
+  - `__getitem__`: This method retrieves an item from the dataset at the specified index. It loads the image, applies transformations, and returns the image data along with the corresponding question and answer.
+
+This file encapsulates the functionality of loading and preprocessing the dataset, making it ready for training and evaluation within the VQA system.
+
+### Description of `utils.py`
+
+The `utils.py` file contains utility functions used in the Visual Question Answering (VQA) system. Below is a detailed description of the contents of this file:
+
+- **Imports**: The file imports necessary libraries and modules including `torch`, `os`, and `pandas`.
+
+- **`load_statements` Function**:
+  - This function takes a file path as input and reads the contents of the file, which are assumed to contain question-answer pairs.
+  - It splits the contents into question-answer pairs and extracts the image IDs from the statements.
+  - Finally, it returns a pandas DataFrame containing the question-answer pairs and corresponding image IDs.
+
+- **`split_df` Function**:
+  - This function takes a DataFrame (`df`) and a test size as input arguments.
+  - It splits the DataFrame into training and testing subsets based on the specified test size.
+  - Optionally, it allows saving the resulting training and testing DataFrames to CSV files if `train_out` and `test_out` paths are provided.
+  - It returns the training and testing DataFrames.
+
+These utility functions assist in loading and preprocessing the data, as well as splitting the dataset into training and testing subsets, facilitating the training and evaluation processes of the VQA system.
+
+Got it! Let's summarize it more succinctly.
+
+### Description of `train.py`
+
+This script handles the training process for the Visual Question Answering (VQA) model. It encompasses the following key functionalities:
+
+- **Imports**: Essential libraries and modules are imported, including those for PyTorch, data loading, dataset handling, model architecture, and utility functions.
+
+- **Device Configuration**: Determines whether to use GPU acceleration if available, otherwise falls back to CPU.
+
+- **Hyperparameters Definition**: Defines key training parameters such as batch size, learning rate, and number of epochs.
+
+- **Dataset Loading and Splitting**: Loads question-answer statements from a file and splits the dataset into training and testing subsets, saving them into CSV files.
+
+- **Dataset Preparation**: Instantiates training and testing datasets, performing necessary preprocessing.
+
+- **DataLoader Creation**: Sets up DataLoaders for efficient batch-wise processing during training and evaluation.
+
+- **Model Initialization**: Initializes the VQA model and moves it to the appropriate device (GPU or CPU).
+
+- **Loss Function and Optimizer**: Defines the loss function (CrossEntropyLoss) and optimizer (Adam) for model training.
+
+- **Training Loop**: Iterates over epochs and batches, performing forward pass, loss computation, backpropagation, and parameter updates. Prints average loss for each epoch.
+
+- **Validation**: After each epoch, evaluates the model on the validation set, computing validation loss and accuracy.
+
+This script streamlines the training process, facilitating the optimization of the VQA model parameters to achieve optimal performance.
 
 
 ## Citation
