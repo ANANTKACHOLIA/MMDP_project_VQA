@@ -49,6 +49,47 @@ Alternatively:
      pip install -r requirements.txt
    - Ensure that GPU acceleration is available and enabled for faster processing. If using a GPU, make sure the appropriate drivers and libraries are installed.
    - Execute the assembled Python files by running the main script (`main.py` or `VQA_Implementation.ipynb`).
+## Code Desription
+
+
+
+## main.py
+
+This script is the main entry point for training the Visual Question Answering (VQA) model. It handles dataset loading, model initialization, and training.
+
+### Contents:
+- **Import Statements**: Import necessary libraries and modules.
+- **Device Configuration**: Determine the device for computation (CPU or GPU).
+- **Paths and Configurations**: Define input paths, data files, and image root directory.
+- **Dataset Loading and Preprocessing**: Load the dataset, split it into training and testing sets, and preprocess questions and answers.
+- **Transformations**: Define image preprocessing transformations.
+- **Dataset Initialization**: Initialize the dataset and data loaders.
+- **Vocabulary and Answer Space Initialization**: Construct vocabulary and answer space dictionaries.
+- **Save Dictionaries**: Save constructed dictionaries to text files.
+- **Model Initialization**: Initialize the VQA model.
+- **Model Training**: Train the initialized model.
+
+### Usage:
+```bash
+python main.py
+```
+
+Ensure GPU support for faster training. Customize parameters as needed.
+
+### Description of `VQAModel.py`
+
+The `VQAModel.py` file contains the implementation of the Visual Question Answering (VQA) model. Below is a detailed description of the contents of this file:
+
+- **Imports**: The file imports necessary libraries and modules including `torch`, `nltk`, `numpy`, `PIL`, `pandas`, `os`, `re`, `json`, `torchvision`, and `torch.nn`. It also imports specific functions and classes from these libraries such as `word_tokenize` from `nltk.tokenize`, `load_dataset` and `set_caching_enabled` from `datasets`, and various modules from `torchvision.models`.
+
+- **VQAModel Class**: 
+  - `__init__`: The constructor initializes the VQA model. It sets up the image embedding using VGG16 pretrained on ImageNet and removes the last fully connected layer. It defines the architecture of the model including text embedding, LSTM layers, and fully connected layers.
+  - `forward`: This method defines the forward pass of the model. It takes images and prompts as inputs and returns the predicted features.
+
+This file encapsulates the architecture of the VQA model, allowing for its easy integration and usage within the broader VQA system.
+
+![image](https://github.com/ANANTKACHOLIA/MMDP_project_VQA/assets/95161741/94396b58-31f6-4113-bd4e-21be4d39bd2a)
+
 
 ## Citation
 If you use this implementation or dataset in your research, please consider citing the original paper:
