@@ -1,0 +1,10 @@
+numy version: 1.21.6
+pandas version: 1.3.5
+pytorch version: 1.13.0
+torchVision version: 0.14.0
+nltk version: 3.2.4
+datasets==2.1.0
+matplotlib==3.5.1
+pillow==9.4.1
+torchvision==0.14.1
+tqdm==4.64.1
