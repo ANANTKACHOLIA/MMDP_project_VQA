@@ -1,5 +1,4 @@
 # MMDP_project_VQA
-Absolutely, it's important to acknowledge the source of inspiration and reference. Here's how you can include that information in the README:
 
 ### Project Overview
 We propose the task of free-form and open-ended Visual Question Answering (VQA), inspired by the work presented in the paper "VQA: Visual Question Answering" by Aishwarya Agrawal, Jiasen Lu, Stanislaw Antol, Margaret Mitchell, C. Lawrence Zitnick, Dhruv Batra, and Devi Parikh. The paper can be found at www.visualqa.org.
