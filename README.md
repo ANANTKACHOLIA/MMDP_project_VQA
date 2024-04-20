@@ -51,7 +51,23 @@ Alternatively:
    - Execute the assembled Python files by running the main script (`main.py` or `VQA_Implementation.ipynb`).
 ## Code Desription
 
+### Description of `VQA-main.ipynb`
 
+The `VQA-main.ipynb` notebook serves as the central hub for implementing the Visual Question Answering (VQA) system. It encompasses the following key functionalities:
+
+- **Imports and Setup**: Essential libraries and modules are imported, including PyTorch, data loading utilities, and necessary preprocessing tools. The notebook is configured to run on either CPU or GPU.
+
+- **Data Loading and Preprocessing**: Handles the loading and preprocessing of the dataset required for training and testing the VQA model. This includes loading question-answer statements, splitting the dataset, and preparing it for training.
+
+- **Model Initialization and Training**: Instantiates the VQA model and sets up the training process using the `train.py` script. Hyperparameters such as batch size, learning rate, and number of epochs are defined and passed to the training function.
+
+- **Model Evaluation and Performance Analysis**: After training, the model is evaluated on a separate validation set to assess its performance. Metrics such as loss and accuracy are computed and analyzed to gauge the effectiveness of the trained model.
+
+- **Demonstration and Examples**: Provides a demonstration of the VQA model by showcasing its performance on sample images and associated questions. The model's predictions are visually presented along with the ground truth answers for comparison.
+
+- **Exploratory Data Analysis (EDA)**: Conducts a brief exploratory data analysis to gain insights into the dataset's characteristics. This includes examining the distribution of questions, answers, and images to understand the underlying patterns and trends.
+
+Overall, the `VQA-main.ipynb` notebook offers a comprehensive and user-friendly interface for implementing, training, evaluating, and demonstrating the VQA model. With its straightforward setup and execution on platforms like Kaggle, users can easily replicate and explore the capabilities of the VQA system.
 
 ## main.py
 
