@@ -166,8 +166,34 @@ This script handles the training process for the Visual Question Answering (VQA)
 
 - **Validation**: After each epoch, evaluates the model on the validation set, computing validation loss and accuracy.
 
-This script streamlines the training process, facilitating the optimization of the VQA model parameters to achieve optimal performance.
+### 8 Project Implementation - Additional Approaches and Results
 
+In response to recent suggestions, alternative architectures were explored by substituting ResNet for VGGNet and AlexNet for VGGNet.
+
+#### 8.1 ResNet
+- **Epoch 10**
+  - Training Loss: 2.748
+  - Validation Loss: 2.748
+  - Validation Accuracy: 0.231
+
+#### 8.2 AlexNet
+- **Epoch 10**
+  - Training Loss: 2.053
+  - Validation Loss: 2.053
+  - Validation Accuracy: 0.274
+
+#### Architecture Comparison
+| Architecture | Training Loss | Validation Loss | Validation Accuracy |
+|--------------|---------------|-----------------|---------------------|
+| ResNet       | 2.748         | 2.748           | 0.231               |
+| AlexNet      | 2.053         | 2.053           | 0.274               |
+| VGGNet       | 2.2259        | 2.2259          | 0.2939              |
+
+---
+
+This section provides a comparison of the performance of different architectures, including ResNet, AlexNet, and VGGNet. It presents training loss, validation loss, and validation accuracy metrics for each architecture at epoch 10. This comparison enables a clear understanding of how alternative architectures perform compared to the original VGGNet architecture.
+
+Note: For detailed implementations of ResNet and AlexNet, refer to the respective notebooks titled "ResNet.ipynb" and "AlexNet.ipynb".
 
 ## Citation
 If you use this implementation or dataset in your research, please consider citing the original paper:
